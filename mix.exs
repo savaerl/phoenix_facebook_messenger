@@ -37,10 +37,10 @@ defmodule FacebookMessenger.Phoenix.Mixfile do
   defp deps do
     d =
     [{:phoenix, "~> 1.1"},
-     {:facebook_messenger, "~> 0.4.0"},
+      {:facebook_messenger, github: "savaerl/facebook_messenger", branch: "master", override: true},
      {:inch_ex, only: :docs},
      {:ex_doc, "~> 0.7", only: :dev},
-     {:earmark, "~> 0.1", only: :docs}]
+     {:earmark, "~> 0cd.1", only: :docs}]
 
      if Mix.env == :test do
       [{:coverex, "~> 1.4.8", only: :test}, {:poison, "~> 2.1.0", override: true} | d]
