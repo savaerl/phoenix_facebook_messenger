@@ -36,16 +36,15 @@ defmodule FacebookMessenger.Phoenix.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     d =
-    [{:phoenix, "~> 1.1"},
-      {:facebook_messenger, github: "savaerl/facebook_messenger", branch: "master", override: true},
-     {:inch_ex, only: :docs},
-     {:ex_doc, "~> 0.7", only: :dev},
-     {:earmark, "~> 0cd.1", only: :docs}]
+    [
+      {:phoenix, "~> 1.3.3", override: true},
+      {:facebook_messenger, github: "savaerl/facebook_messenger", branch: "master", override: true}
+    ]
 
      if Mix.env == :test do
       [{:coverex, "~> 1.4.8", only: :test}, {:poison, "~> 2.1.0", override: true} | d]
     else
-      [{:poison, "~> 2.1.0"} | d]
+      [{:poison, "~> 2.1.0 or ~> 3.0" } | d]
     end
   end
 

@@ -4,3 +4,5 @@
 erl_crash.dump
 *.ez
 doc/
+.idea/
+phoenix_facebook_messenger.iml
